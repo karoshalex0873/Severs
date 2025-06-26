@@ -1,6 +1,7 @@
 import express from 'express'
 import dotenv from 'dotenv'
 import NewsRoutes from './routes/NewsRoutes'
+import ussdRoutes from './routes/ussdRoutes'
 
 
 
@@ -19,6 +20,7 @@ app.get('/api/v1', (req, res) => {
 })
 
 app.use('/api/v1',NewsRoutes)
+app.use('/api/v1',ussdRoutes)
 
 
 app.listen(PORT, () => {
