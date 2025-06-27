@@ -11,26 +11,22 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ussdController = void 0;
 const accountBalance = 1000;
-// USSD Controller
 const ussdController = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { sessionId, serviceCode, phoneNumber, text } = req.body;
-    let response = '';
-    if (text === '') {
-        // Menu
-        response = `CON Welcome my first USSD request
-    1. Check Account Balance
-    2. Exit`;
+    let response = "";
+    if (text === "") {
+        response = `CON Welcome to my first USSD request\n1. Check Account Balance\n2. Exit`;
     }
-    else if (text === '1') {
-        response = `Your Request has been sent successfully \n your balance is ${accountBalance}`;
+    else if (text === "1") {
+        response = `END Your balance is ${accountBalance}`;
     }
-    else if (text === '2') {
-        response = `Thank you for using my first USSD request`;
+    else if (text === "2") {
+        response = `END Thank you for using my first USSD request`;
     }
     else {
         response = `END Invalid option. Please try again.`;
     }
-    res.set('Content-Type', 'text/plain');
+    res.set("Content-Type", "text/plain");
     res.status(200).send(response);
 });
 exports.ussdController = ussdController;
