@@ -1,8 +1,8 @@
 // routes
 import express from 'express';
-import { scrapeTechNews } from '../controllers/NewsScrapper';
+import { findNews } from '../controllers/findNews';
 const router=express.Router()
 
-router.get('/news',scrapeTechNews)
+router.get('/news', findNews)
 
 export default router
