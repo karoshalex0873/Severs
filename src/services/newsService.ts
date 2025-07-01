@@ -11,11 +11,10 @@ export const fetchNewsArticles= (async (query: string) => {
       params: {
         q: query,
         language: "en",
-        sortBy: "relevancy",
+        sortBy: "publishedAt",
         apiKey: API_KEY
       }
     })
-    console.log("API KEY:", API_KEY);
     return response.data.articles
   } catch (error) {
     console.log(error)
