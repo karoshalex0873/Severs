@@ -21,7 +21,7 @@ app.use((0, cors_1.default)({
 }));
 app.get('/api/v1', (req, res) => {
     res.status(200).json({
-        message: 'WELCOME TO AI POWERED NEWS_APP FROM SCRAPPING ONLINE NEWS'
+        message: 'WELCOME TO AI POWERED NEWS_APP FROM SCRAPPING ONLINE NEWS 🚀🔥🔥'
     });
 });
 app.use('/api/v1', NewsRoutes_1.default);

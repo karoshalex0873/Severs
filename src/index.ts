@@ -22,7 +22,7 @@ app.use(cors({
 
 app.get('/api/v1', (req, res) => {
   res.status(200).json({
-    message:'WELCOME TO AI POWERED NEWS_APP FROM SCRAPPING ONLINE NEWS'
+    message:'WELCOME TO AI POWERED NEWS_APP FROM SCRAPPING ONLINE NEWS 🚀🔥🔥'
   })
 })
 
